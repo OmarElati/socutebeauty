@@ -42,8 +42,8 @@ function getSupabase() {
   const url =
     typeof window !== "undefined"
       ? (import.meta as { env?: Record<string, string> }).env?.VITE_SUPABASE_URL ??
-        "https://oczlqoqrfsldhfvhaumh.supabase.co"
-      : process.env.SUPABASE_URL ?? "https://oczlqoqrfsldhfvhaumh.supabase.co";
+        "https://jvybxhqhfivfxvvihlos.supabase.co"
+      : process.env.SUPABASE_URL ?? "https://jvybxhqhfivfxvvihlos.supabase.co";
   const key =
     typeof window !== "undefined"
       ? (import.meta as { env?: Record<string, string> }).env
