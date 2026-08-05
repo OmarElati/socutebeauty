@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 500"
+  fill="none"
+  stroke="#9CA3AF"
+  stroke-width="9"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- Outer Frame — top curve & B top bowl -->
+  <path d="M 140 70 C 220 70, 320 70, 360 70 C 425 70, 440 130, 440 180 C 440 230, 390 250, 320 250"/>
+  <!-- Outer Frame — B bottom bowl & bottom curve -->
+  <path d="M 320 250 C 400 250, 445 270, 445 330 C 445 395, 415 430, 350 430 L 140 430"/>
+  <!-- Left S top arch & outer curve -->
+  <path d="M 260 70 C 140 70, 60 115, 60 200 C 60 270, 140 280, 220 310 C 270 330, 290 380, 230 420 C 180 445, 100 420, 90 360"/>
+  <!-- S lower teardrop flourish loop -->
+  <path d="M 90 360 C 80 320, 130 300, 160 330 C 190 360, 170 420, 140 430"/>
+  <!-- Central vertical stem -->
+  <path d="M 245 70 L 245 430"/>
+  <!-- Secondary parallel stem -->
+  <path d="M 265 70 L 265 430"/>
+  <!-- Interlocking diagonal ribbon -->
+  <path d="M 180 130 C 210 180, 260 260, 320 340"/>
+  <!-- Calligraphic accent ribbon -->
+  <path d="M 200 100 C 240 150, 280 230, 310 300"/>
+</svg>
