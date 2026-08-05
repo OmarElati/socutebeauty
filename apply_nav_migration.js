@@ -1,8 +1,8 @@
 const { createClient } = require('c:/Users/MSI/socute-beauty/velvet-aura-admin/node_modules/@supabase/supabase-js');
 const fs = require('fs');
 
-const url = 'https://oczlqoqrfsldhfvhaumh.supabase.co';
-const key = 'sb_publishable_XRRV-ubMlQYxckCiXgYWQA_xN3rYV6T';
+const url = 'https://jvybxhqhfivfxvvihlos.supabase.co';
+const key = 'sb_publishable_174bfjRS2QkS23QlvAsd8w__T8Eb09_';
 const supabase = createClient(url, key);
 
 async function applyMigration() {
