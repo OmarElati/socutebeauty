@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.output/
+.wrangler/
+dist/
+build/
+.env
+.env.local
+*.log
+.DS_Store
+package-lock.json
+yarn.lock
