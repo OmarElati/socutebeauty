@@ -1,0 +1,6 @@
+{
+  "name": "Socute Beauty — Velvet Aura",
+  "description": "Socute Beauty — Velvet Aura, Haute Parfumerie & Cosmétique",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

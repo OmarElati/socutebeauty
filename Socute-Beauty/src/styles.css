@@ -1,0 +1,166 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface-deep: var(--surface-deep);
+  --color-surface-light: var(--surface-light);
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-rose-dust: var(--rose-dust);
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+  /* Brand tokens */
+  --surface-deep: #2b0916;
+  --surface-light: #fbf7f4;
+  --ink: #1a1114;
+  --gold: #c9a24b;
+  --gold-soft: #e4d3a6;
+  --rose-dust: #b98a93;
+
+  /* Semantic — dark burgundy default */
+  --background: #410e21;
+  --foreground: #fbf7f4;
+  --card: #2b0916;
+  --card-foreground: #fbf7f4;
+  --popover: #2b0916;
+  --popover-foreground: #fbf7f4;
+  --primary: #c9a24b;
+  --primary-foreground: #1a1114;
+  --secondary: #2b0916;
+  --secondary-foreground: #fbf7f4;
+  --muted: #2b0916;
+  --muted-foreground: rgba(251, 247, 244, 0.65);
+  --accent: #c9a24b;
+  --accent-foreground: #1a1114;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #fbf7f4;
+  --border: rgba(201, 162, 75, 0.22);
+  --input: rgba(201, 162, 75, 0.28);
+  --ring: #c9a24b;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #c9a24b #1f0610;
+  }
+
+  /* Modern Theme Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1f0610;
+    border-left: 1px solid rgba(201, 162, 75, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c9a24b 0%, #a37f30 100%);
+    border-radius: 4px;
+    border: 1.5px solid #1f0610;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e4d3a6 0%, #c9a24b 100%);
+    box-shadow: 0 0 10px rgba(201, 162, 75, 0.5);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #1f0610;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility gold-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 100%;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@utility velvet-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(43, 9, 22, 0.8) 0%,
+    rgba(201, 162, 75, 0.18) 50%,
+    rgba(43, 9, 22, 0.8) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.2s infinite ease-in-out;
+}
