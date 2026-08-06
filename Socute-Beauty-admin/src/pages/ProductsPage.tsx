@@ -213,10 +213,10 @@ function ProductPanel({
       // 1. Upsert the product
       if (productId) {
         const { id: _id, ...rest } = payload as { id?: string } & Record<string, unknown>;
-        const { error } = await supabase.from("products").update(rest).eq("id", productId);
+        const { error } = await supabase.from("products").update(rest as any).eq("id", productId);
         if (error) throw error;
       } else {
-        const { data, error } = await supabase.from("products").insert(payload).select("id").single();
+        const { data, error } = await supabase.from("products").insert(payload as any).select("id").single();
         if (error) throw error;
         productId = data.id;
       }

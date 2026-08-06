@@ -36,6 +36,7 @@ export type Database = {
           sort_order: number;
           category_id: string | null;
           product_ids: string[];
+          active: boolean;
           created_at: string;
           updated_at: string;
         };
@@ -47,6 +48,7 @@ export type Database = {
           sort_order?: number;
           category_id?: string | null;
           product_ids?: string[];
+          active?: boolean;
           created_at?: string;
           updated_at?: string;
         };
@@ -58,6 +60,7 @@ export type Database = {
           sort_order?: number;
           category_id?: string | null;
           product_ids?: string[];
+          active?: boolean;
           created_at?: string;
           updated_at?: string;
         };
